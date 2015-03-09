@@ -50,8 +50,21 @@ angular.module('starter.controllers', [])
 */
 
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+.controller('SettingsCtrl', function($scope, Settings) {
+    console.log("settings!!!");
+
+    $scope.settings = {
+        enableRemote: false
+    };
+
+    $scope.statuses = Settings.allStatuses();
+
+    $scope.removeStatus = function(status) {
+        Settings.removeStatus(status);
+    }
+
+    $scope.addStatus = function(status) {
+        Settings.addStatus(status);
+    }
+
 });

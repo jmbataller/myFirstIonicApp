@@ -93,4 +93,23 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
+})
+
+
+.factory('Settings', function() {
+
+    var statuses = [ "Delivered" , "Pending", "Collected" ];
+
+    return {
+        allStatuses: function() {
+            return statuses;
+        },
+        removeStatus: function(status) {
+            statuses.splice(statuses.indexOf(status), 1);
+        },
+        addStatus: function(status) {
+            statuses.add(status);
+        }
+    }
 });
+
