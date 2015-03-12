@@ -7,22 +7,24 @@ Ionic framework + Angular.js + phonegap
 
 - Build app
 
-ionic build
+```ionic build```
 
 - Run app in the browser
 
-'''ionic serve'''
+```ionic serve```
 
-ionic server --labs
+```ionic server --labs```
 
 - Run app in emulator
 
+```
 ionic emulate android
 ionic emulate ios
-
+```
 
 - Build mobile app:
 
+```
 cordova build --release android
-
+```
 
