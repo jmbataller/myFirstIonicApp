@@ -108,7 +108,9 @@ angular.module('starter.services', [])
             statuses.splice(statuses.indexOf(status), 1);
         },
         addStatus: function(status) {
-            statuses.add(status);
+            if(statuses.indexOf(status) < 0) {
+                statuses.push(status);
+            }
         }
     }
 });
