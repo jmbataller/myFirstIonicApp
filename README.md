@@ -11,7 +11,9 @@ ionic build
 
 - Run app in the browser
 
-ionic serve
+'''ionic serve'''
+
+ionic server --labs
 
 - Run app in emulator
 
