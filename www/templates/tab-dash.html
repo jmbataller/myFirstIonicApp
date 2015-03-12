@@ -1,24 +1,20 @@
 <ion-view view-title="Dashboard">
-  <ion-content class="padding">
 
-    <div class="list card">
-        <div class="item item-divider">
-            Flat 5 Pollard Row Apartments
-        </div>
-        <div class="item item-text-wrap">
-            Flat 5, Pollard Row Apartments, 35 Florida Street, E26LP London
-        </div>
-    </div>
-        <button class="button button-block button-balanced" ng-click="closeNewTask()">
-            In Office
-        </button>
-        <button class="button button-block button-positive">
-            Delivered
-        </button>
+  <ion-content>
+      <ion-list>
 
-        <button class="button button-block button-positive">
-            Collected
-        </button>
+          <div class="list padding">
+              <label class="item item-input">
+                  <i class="icon ion-search placeholder-icon"></i>
+                  <input type="text" placeholder="Search">
+              </label>
+          </div>
 
+          <ion-item class="item-remove-animate item-icon-right" ng-repeat="asset in assets" type="item-text-wrap" href="#/tab/chats/{{asset.id}}">
+              <h2>{{asset.name}}</h2>
+              <p>{{asset.description}}</p>
+              <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+      </ion-list>
   </ion-content>
 </ion-view>

@@ -1,6 +1,8 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, Assets) {
+    $scope.assets = Assets.all();
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();

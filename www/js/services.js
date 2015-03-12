@@ -1,5 +1,6 @@
 angular.module('starter.services', [])
 
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
@@ -95,6 +96,28 @@ angular.module('starter.services', [])
   }
 })
 
+
+.factory('Assets', function() {
+
+    var assets = [{
+        id: 0,
+        name: "Flat 5 - X Building",
+        description: "Bethnal Green - E26LP - London",
+        nfcId: null
+    },
+    {
+        id: 0,
+        name: "Flat 5 - X Building",
+        description: "Bethnal Green - E26LP - London",
+        nfcId: null
+    }];
+
+    return {
+        all: function() {
+            return assets;
+        }
+    }
+})
 
 .factory('Settings', function() {
 
