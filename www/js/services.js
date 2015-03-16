@@ -97,24 +97,29 @@ angular.module('starter.services', [])
 })
 
 
-.factory('Assets', function() {
+.factory('Assets', function(Settings) {
 
     var assets = [{
         id: 0,
         name: "Flat 5 - X Building",
         description: "Bethnal Green - E26LP - London",
+        status: "Delivered",
         nfcId: null
     },
     {
         id: 0,
         name: "Flat 5 - X Building",
         description: "Bethnal Green - E26LP - London",
+        status: "Waiting",
         nfcId: null
     }];
 
     return {
         all: function() {
             return assets;
+        },
+        get: function(assetId) {
+            return assets[assetId];
         }
     }
 })

@@ -10,7 +10,8 @@
               </label>
           </div>
 
-          <ion-item class="item-remove-animate item-icon-right" ng-repeat="asset in assets" type="item-text-wrap" href="#/tab/chats/{{asset.id}}">
+          <ion-item class="item-remove-animate item-icon-right" ng-repeat="asset in assets" type="item-text-wrap" href="#/tab/assets/{{asset.id}}">
+              <span class="badge badge-positive">{{asset.status}}</span>
               <h2>{{asset.name}}</h2>
               <p>{{asset.description}}</p>
               <i class="icon ion-chevron-right icon-accessory"></i>

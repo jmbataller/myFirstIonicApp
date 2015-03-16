@@ -4,6 +4,11 @@ angular.module('starter.controllers', [])
     $scope.assets = Assets.all();
 })
 
+.controller('AssetDetailCtrl', function($scope, $stateParams, Assets, Settings) {
+    $scope.statuses = Settings.allStatuses();
+    $scope.asset = Assets.get($stateParams.assetId);
+})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
